@@ -1,0 +1,16 @@
+[gd_resource type="TileSet" format=3 uid="uid://cuy2kqijws3dq"]
+
+[ext_resource type="PackedScene" uid="uid://dveqtli5m2vn1" path="res://Scenes/Tiles/outsideTile.tscn" id="1_fn0xb"]
+[ext_resource type="PackedScene" uid="uid://x03t3nsotfb4" path="res://Scenes/Tiles/landTile.tscn" id="2_04sdi"]
+[ext_resource type="PackedScene" uid="uid://dhod2wjgfg280" path="res://Scenes/Tiles/waterTile.tscn" id="3_04y7s"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_fn0xb"]
+scenes/1/scene = ExtResource("1_fn0xb")
+scenes/2/scene = ExtResource("2_04sdi")
+scenes/3/scene = ExtResource("3_04y7s")
+
+[resource]
+tile_size = Vector2i(32, 32)
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
+sources/1 = SubResource("TileSetScenesCollectionSource_fn0xb")

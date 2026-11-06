@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dveqtli5m2vn1"]
+
+[ext_resource type="Texture2D" uid="uid://drlld15cofpis" path="res://Assets/icon.svg" id="1_1kmbp"]
+[ext_resource type="Script" uid="uid://fegjbwaldig3" path="res://scripts/battle/tile.gd" id="1_36604"]
+
+[node name="outsideTile" type="Node2D" unique_id=867041909]
+script = ExtResource("1_36604")
+tile_type = -1
+
+[node name="icon" type="Sprite2D" parent="." unique_id=340287175]
+modulate = Color(1, 0.18039216, 1, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_1kmbp")
