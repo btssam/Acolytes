@@ -23,8 +23,7 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
-"res://scripts/": "green",
-"res://scripts/battle/": "red"
+"res://scripts/": "green"
 }
 
 [physics]
