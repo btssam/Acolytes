@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cn6m6tv47kp7r"]
+
+[ext_resource type="Script" uid="uid://cx3a7gqlq05se" path="res://Scenes/Map/map_location.gd" id="1_ex7jq"]
+[ext_resource type="Texture2D" uid="uid://drlld15cofpis" path="res://Assets/icon.svg" id="2_3jxth"]
+
+[node name="MapLocation" type="Control" unique_id=1256121711]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_ex7jq")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1916617733]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_3jxth")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=455315696]
+default_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+texture_mode = 1
