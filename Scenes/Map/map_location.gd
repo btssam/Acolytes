@@ -4,7 +4,7 @@ enum states {ENABLED, DISABLED, SELECTED}
 signal pressed 
 var input_nodes : Array[MapLocation]
 
-@export_category("connections")
+@export_group("Node Connections")
 @export var output_nodes : Array[MapLocation]
 @export var state := states.ENABLED:
 	set(new_state):
@@ -19,7 +19,7 @@ var input_nodes : Array[MapLocation]
 
 @export_group("Node Colors")
 @export var enabled_color := Color(1.0, 1.0, 1.0, 1.0)
-@export var disabled_color := Color(0.229, 0.229, 0.229, 1.0)
+@export var disabled_color := Color(0.43712, 0.43712, 0.43712, 1)
 @export var selected_color := Color(0.768, 0.001, 0.781, 1.0)
 
 func getInputs() -> Array[MapLocation]:
