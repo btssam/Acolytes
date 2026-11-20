@@ -17,6 +17,4 @@ offset_bottom = 128.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_3jxth")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=455315696]
-default_color = Color(0.14406255, 0.14406255, 0.14406255, 1)
-texture_mode = 1
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

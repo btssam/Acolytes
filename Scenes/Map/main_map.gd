@@ -1,24 +1,38 @@
-extends Node2D
+class_name MapScene extends Node2D
 
+@export 
+var starting_node : MapLocation
+var current_location : MapLocation
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	## GraphEdit Test
-	#for child : Control in $GraphEdit.get_children(): 
-		#if child is GraphNode:
-			#(child as GraphNode).selectable = false;
-			
-	 ## our own implementation
-	print("making lines")
 	var children : Array[Node] = $MapParent.get_children()
 	for child : MapLocation in children:
-		for next in child.getOutputs(): 
-			var line : Line2D = child.get_child(1)
-			line.add_point(child.position)
-			line.add_point(next.position)
-			print(child.name)
-			print(next.name)
-			print(line.points)
-			
-	print("lines done!")
-			
+		for next in child.output_nodes: 
+			# add input node into array
+			next.addInput(child)
+			# add lines
+			var line : Line2D = Line2D.new()
+			# center of TextureButton 
+			line.position = Vector2(32, 32) 
+			line.default_color = Color(0.14, 0.14, 0.14, 1.0)
+			line.add_point(Vector2(0,0))
+			line.add_point(next.position - child.position)
+			child.add_child(line)
+			child.move_child(line, 0)
+		child.pressed.connect(_node_entered)
+		child.state = MapLocation.states.DISABLED
+		
+	starting_node.state = MapLocation.states.ENABLED
+	current_location = starting_node
+	
+func _node_entered(node : MapLocation): 
+	for input in node.input_nodes:
+		input.state = MapLocation.states.DISABLED
+		for sibling in input.output_nodes:
+			sibling.state = MapLocation.states.DISABLED
+	node.state = MapLocation.states.SELECTED
+	for output in node.output_nodes: 
+		output.state = MapLocation.states.ENABLED
+		
+		 
+	

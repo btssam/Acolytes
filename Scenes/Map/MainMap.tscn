@@ -3,171 +3,9 @@
 [ext_resource type="Script" uid="uid://ctd44ykygmeck" path="res://Scenes/Map/main_map.gd" id="1_pvjg4"]
 [ext_resource type="PackedScene" uid="uid://cn6m6tv47kp7r" path="res://Scenes/Map/MapLocation.tscn" id="2_ai0re"]
 
-[node name="MainMap" type="Node2D" unique_id=1961381452]
+[node name="MainMap" type="Node2D" unique_id=1961381452 node_paths=PackedStringArray("starting_node")]
 script = ExtResource("1_pvjg4")
-
-[node name="GraphEdit" type="GraphEdit" parent="." unique_id=1470089277]
-visible = false
-offset_right = 1152.0
-offset_bottom = 648.0
-show_grid = false
-connections = Array[Dictionary]([{
-"from_node": &"start",
-"from_port": 0,
-"keep_alive": true,
-"to_node": &"middle1",
-"to_port": 0
-}, {
-"from_node": &"start",
-"from_port": 0,
-"keep_alive": true,
-"to_node": &"middle2",
-"to_port": 0
-}, {
-"from_node": &"middle2",
-"from_port": 0,
-"keep_alive": true,
-"to_node": &"end",
-"to_port": 0
-}, {
-"from_node": &"middle1",
-"from_port": 0,
-"keep_alive": true,
-"to_node": &"end",
-"to_port": 1
-}])
-minimap_enabled = false
-show_menu = false
-show_zoom_buttons = false
-show_grid_buttons = false
-show_minimap_button = false
-show_arrange_button = false
-
-[node name="mapBG" type="ColorRect" parent="GraphEdit" unique_id=1113338238]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0.61829567, 0.56406206, 0.30056262, 1)
-
-[node name="middle2" type="GraphNode" parent="GraphEdit" unique_id=1860015257]
-layout_mode = 0
-offset_left = 416.0
-offset_top = 219.0
-offset_right = 485.0
-offset_bottom = 294.0
-mouse_filter = 1
-position_offset = Vector2(416, 219)
-draggable = false
-title = "wubngs"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(0.19614312, 0.19614306, 0.19614309, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = true
-slot/0/right_type = 2
-slot/0/right_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-
-[node name="ColorRect" type="ColorRect" parent="GraphEdit/middle2" unique_id=1258978801]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
-layout_mode = 2
-color = Color(0.69514877, 0.25829786, 0.27315763, 1)
-
-[node name="end" type="GraphNode" parent="GraphEdit" unique_id=1387320688]
-layout_mode = 0
-offset_left = 657.0
-offset_top = 260.0
-offset_right = 743.0
-offset_bottom = 357.0
-mouse_filter = 1
-position_offset = Vector2(657, 260)
-draggable = false
-title = "wubngs 2"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = true
-slot/1/left_type = 0
-slot/1/left_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-
-[node name="ColorRect" type="ColorRect" parent="GraphEdit/end" unique_id=1909667187]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
-layout_mode = 2
-color = Color(0.2627451, 0.6862745, 0.627451, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GraphEdit/end" unique_id=2025908376]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
-layout_mode = 2
-color = Color(0.2627451, 0.6862745, 0.627451, 1)
-
-[node name="start" type="GraphNode" parent="GraphEdit" unique_id=878607433]
-layout_mode = 0
-offset_left = 106.0
-offset_top = 264.0
-offset_right = 211.0
-offset_bottom = 416.0
-mouse_filter = 1
-position_offset = Vector2(106, 264)
-draggable = false
-title = "wubngs"
-slot/0/left_enabled = false
-slot/0/left_type = 0
-slot/0/left_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = true
-slot/0/right_type = 0
-slot/0/right_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-
-[node name="ColorRect" type="ColorRect" parent="GraphEdit/start" unique_id=410989229]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
-layout_mode = 2
-color = Color(0.69514877, 0.25829786, 0.27315763, 1)
-
-[node name="middle1" type="GraphNode" parent="GraphEdit" unique_id=1164932188]
-layout_mode = 0
-offset_left = 431.0
-offset_top = 436.0
-offset_right = 500.0
-offset_bottom = 511.0
-mouse_filter = 1
-position_offset = Vector2(431, 436)
-draggable = false
-selectable = false
-title = "wubngs"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = true
-slot/0/right_type = 0
-slot/0/right_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-
-[node name="ColorRect" type="ColorRect" parent="GraphEdit/middle1" unique_id=931539500]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
-layout_mode = 2
-color = Color(0.69514877, 0.25829786, 0.27315763, 1)
+starting_node = NodePath("MapParent/start")
 
 [node name="mapBG" type="ColorRect" parent="." unique_id=1940050838]
 offset_right = 1152.0
@@ -176,26 +14,26 @@ color = Color(0.61829567, 0.56406206, 0.30056262, 1)
 
 [node name="MapParent" type="Node2D" parent="." unique_id=667210470]
 
-[node name="start" parent="MapParent" unique_id=1256121711 node_paths=PackedStringArray("_output_nodes") instance=ExtResource("2_ai0re")]
+[node name="start" parent="MapParent" unique_id=1256121711 node_paths=PackedStringArray("output_nodes") instance=ExtResource("2_ai0re")]
 offset_left = 150.0
 offset_top = 265.0
 offset_right = 150.0
 offset_bottom = 265.0
-_output_nodes = [NodePath("../middle1"), NodePath("../middle2")]
+output_nodes = [NodePath("../middle1"), NodePath("../middle2")]
 
-[node name="middle1" parent="MapParent" unique_id=1121770683 node_paths=PackedStringArray("_output_nodes") instance=ExtResource("2_ai0re")]
+[node name="middle1" parent="MapParent" unique_id=1121770683 node_paths=PackedStringArray("output_nodes") instance=ExtResource("2_ai0re")]
 offset_left = 484.0
 offset_top = 139.0
 offset_right = 484.0
 offset_bottom = 139.0
-_output_nodes = [NodePath("../end")]
+output_nodes = [NodePath("../end")]
 
-[node name="middle2" parent="MapParent" unique_id=1880670674 node_paths=PackedStringArray("_output_nodes") instance=ExtResource("2_ai0re")]
+[node name="middle2" parent="MapParent" unique_id=1880670674 node_paths=PackedStringArray("output_nodes") instance=ExtResource("2_ai0re")]
 offset_left = 494.0
 offset_top = 457.0
 offset_right = 494.0
 offset_bottom = 457.0
-_output_nodes = [NodePath("../end")]
+output_nodes = [NodePath("../end")]
 
 [node name="end" parent="MapParent" unique_id=426701509 instance=ExtResource("2_ai0re")]
 offset_left = 851.0
